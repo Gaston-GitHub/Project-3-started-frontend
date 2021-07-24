@@ -5,6 +5,7 @@ import App from './App';
 import AuthProvider from './providers/AuthProvider';
 import './index.css';
 
+
 ReactDOM.render(
   <Router>
     <AuthProvider>
@@ -12,3 +13,5 @@ ReactDOM.render(
     </AuthProvider>
   </Router>
 , document.getElementById('root'));
+
+

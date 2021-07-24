@@ -21,8 +21,7 @@ class App extends Component {
 			return <div>loading ... </div>;
 		}
 		return (
-			<div className="container">
-				<h1>Basic React Authentication</h1>
+			<div>
 				<Navbar />
 				<Switch>
 					<AnonRoute path="/signup" component={Signup} />

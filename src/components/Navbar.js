@@ -7,19 +7,46 @@ class Navbar extends Component {
 	render() {
 		const { user, isLoggedIn, logout } = this.props;
 		return (
-			<div>
-				{isLoggedIn ? (
-					<>
-						<p>username: {user.username}</p>
-						<button onClick={logout}>Logout</button>
-					</>
-				) : (
-					<>
-						<Link to="/login">Login</Link>
-						<Link to="/signup">Signup</Link>
-					</>
-				)}
-			</div>
+			
+				<div className="h-20 w-full bg-black bg-opacity-50 flex items-center px-4" >
+					<button className="text-white"  onClick={logout}>Logout</button>
+
+					<div className="w-full h-full flex justify-center items-center">
+			 			{isLoggedIn ? (
+			 				<>
+								<p className="text-white">User name: {user.username}</p>
+		
+								
+			 				</>
+			 			) : (
+			 				<>
+							 <div className="flex h-full items-center  hover:bg-black hover:bg-opacity-50">
+                 {/* <div className="mx-4 text-white">Login</div> */}
+                 <div className=" h-8 w-px bg-gray-300"></div>
+									<Link className="mx-4 text-white" to="/login">Login</Link>
+            	 </div>
+							 <div className="flex h-full items-center  hover:bg-black hover:bg-opacity-50">
+                	{/* <div className="mx-4 text-white">Opcion</div> */}
+                	<div className=" h-8 w-px bg-gray-300"></div>
+									<Link className="mx-4 text-white" to="/signup">Signup</Link>
+              	</div>
+							
+								<div className="flex h-full items-center  hover:bg-black hover:bg-opacity-50">
+                 <div className="h-8 w-px bg-gray-300"></div>
+								 
+								
+								</div>
+							
+			 				
+			 					
+			 				</>
+			 			)}
+						
+				 </div>
+				 
+			 </div>
+		
+			
 		);
 	}
 }
