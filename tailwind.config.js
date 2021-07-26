@@ -5,7 +5,12 @@ module.exports = {
   theme: {
     fontFamily: {
       "sans": ['SummerCalling', 'sans-serif']
+         
     },
+    backgroundImage: (theme) => ({
+      'sign-up': "url('./images/wine 4 bg.jpeg')",
+      'sign-in': "url('./images/sign in bg 2.png')"
+    })
   },
   variants: {},
   plugins: [],
