@@ -5,8 +5,9 @@
         "node": true
     },
     "extends": [
-        "plugin:react/recommended",
         "standard",
+        "eslint:recommended",
+        "plugin:react/recommended",
         "prettier"
     ],
     "parserOptions": {
@@ -22,5 +23,4 @@
     "rules": {
         "react/prop-types": "off"
     }
-    
 }
