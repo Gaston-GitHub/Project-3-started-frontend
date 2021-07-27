@@ -11,10 +11,10 @@ class Navbar extends Component {
 				<div className="h-20 w-full bg-yellow-100 bg-opacity-100 flex items-center px-4" >
 					<button className="text-black font-mono"  onClick={logout}>Logout</button>
 
-					<div className="w-full h-full flex justify-center items-center">
+					<div className="w-full h-full flex justify-end items-center">
 			 			{isLoggedIn ? (
 			 				<>
-								<p className="text-black font-mono md:font-mono">User: {user.username}</p>
+								<p className="text-black font-mono md:font-mono text-right">User: {user.username}</p>
 		
 								
 			 				</>

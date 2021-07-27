@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Switch } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
+import Footer from './components/Footer.js'
 import PrivateRoute from './components/PrivateRoute';
 import AnonRoute from './components/AnonRoute';
 import Private from './pages/Private';
@@ -31,6 +32,7 @@ class App extends Component {
 					<PrivateRoute exact path="/wine" component={AddWine} /> 
 					<PrivateRoute exact path="/wine/:id" component={WineDetails} />
 				</Switch>
+				<Footer />
 			</div>
 			
 		);
