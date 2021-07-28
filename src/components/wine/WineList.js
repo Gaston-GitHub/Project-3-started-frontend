@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-// import AddWine from '../wine/AddWine'; // <== !!!
+// import AddWine from '../wine/AddWine';
 
 class WineList extends Component {
   constructor(props) {
@@ -35,23 +35,18 @@ class WineList extends Component {
 
   render() {
     return (
-      <div>
+      <div className="min-h-screen py-6 flex flex-col justify-center text-center sm:py-12 bg-bgPages md:bg-fixed">
         {this.state.status === 'loading' && <p>loading...</p>}
         {this.state.status === 'loaded' &&
          this.state.wineList.map(wine => {
             return (
               <div key={wine._id}>
-                <Link to={`/wine/${wine._id}`}>
+                <Link to={`/wine/details/${wine._id}`}>
                   <h3>{wine.name}</h3>
                 </Link>
-                {/* <p>{wine.type} </p> */}
               </div>
             )})
           }
-        
-        <div>
-            {/* <AddWine getData={() => this.getAllWines()}/> <== !!! */}
-        </div>
       </div>
     )
   }

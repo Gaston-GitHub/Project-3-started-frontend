@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import EditWine from './EditWine';
+// import EditWine from './EditWine';
  
 class WineDetails extends Component {
   constructor(props) {
@@ -29,16 +29,6 @@ class WineDetails extends Component {
       })
   }
 
-// EDIT WINE
-  renderEditWine = () => {
-    if(!this.state.name){
-      this.getSingleWine();
-    } else {
-            return <EditWine wine={this.state} getWine={this.getSingleWine} {...this.props} />
-    }
-  }
- 
-// DELETE WINE:
   deleteWine = () => {
     const { params } = this.props.match;
     axios.delete(`http://localhost:5000/wine/${params.id}`, { withCredentials: true })
@@ -52,19 +42,23 @@ class WineDetails extends Component {
  
   render(){
     return(
-      <div>
-        <h1>{this.state.name}</h1>
-        <p>{this.state.type}</p>
-        <p>{this.state.grape}</p>
-        <p>{this.state.year}</p>
-        <p>{this.state.country}</p>
-        <p>{this.state.price}</p>
-        <p>{this.state.review}</p>
-        <p>{this.state.images}</p>
-        <div>{this.renderEditWine()}</div>
-        <button onClick={() => this.deleteWine()}>Delete Wine</button> {/* <== !!! */}
-
-        <Link to={'/wine'}>Back to Wines</Link>
+      <div className="min-h-screen flex flex-col justify-center md:py-12 bg-bgPages md:bg-fixed bg-auto">
+        <h1>Name:{this.state.name}</h1>
+        <p>Type:{this.state.type}</p>
+        <p>Grape:{this.state.grape}</p>
+        <p>Year:{this.state.year}</p>
+        <p>COuntry:{this.state.country}</p>
+        <p>Price:{this.state.price}</p>
+        <p>Review:{this.state.review}</p>
+        <p>Image:{this.state.images}</p> 
+        <br></br>
+        <button onClick={() => this.deleteWine()}>Delete Wine</button>
+        <br></br>
+        <br></br>
+        <Link to='/wine/edit/:id'>Edit your wine!</Link>
+        <br></br>
+        <br></br>
+        <Link to='/wine'>Back to Wines</Link>
       </div>
     )
   }

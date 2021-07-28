@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom'
 
 
 
@@ -93,29 +94,44 @@ class EditWine extends Component {
 
   render(){
     return (
-      <div>
-        <hr />
-        <h3>Edit form</h3>
+    <div>
+       <div className="min-h-screen py-6 flex flex-col justify-center sm:py-12 bg-bgPages md:bg-fixed"> 
         <form onSubmit={this.handleFormSubmit}>
-          <label>Name:</label>
-          <input type="text" name="name" value={this.state.name} onChange={e => this.handleChangeName(e)}/>
-          <label>Type:</label>
-          <input name="type" value={this.state.type} onChange={e => this.handleChangeType(e)} />
-          <label>Grape:</label>
-          <input name="grape" value={this.state.grape} onChange={ e => this.handleChangeGrape(e)} />
-          <label>Year:</label>
-          <input name="year" value={this.state.year} onChange={ e => this.handleChangeYear(e)} />
-          <label>Country:</label>
-          <input name="country" value={this.state.country} onChange={ e => this.handleChangeCountry(e)} />
-          <label>Price:</label>
-          <input name="price" value={this.state.price} onChange={ e => this.handleChangePrice(e)} />
-          <label>Review:</label>
-          <input name="review" value={this.state.review} onChange={ e => this.handleChangeReview(e)} />
-          <label>Images:</label>
-          <input name="images" value={this.state.images} onChange={ e => this.handleChangeImages(e)} />
-          <button onClick={this.handleFormSubmit}>Edit Wine</button>
+        <div className="">
+          <label className="text-sm">Name:</label>
+          <input className="w-full h-8 px-2 text-sm text-gray-700 placeholder--600 border rounded-lg focus:shadow-outline" type="text" name="name" value={this.state.name} onChange={e => this.handleChangeName(e)}/>
+        </div>
+          <label className="text-sm">Type:</label>
+          <input className="w-full h-8 px-2 text-sm text-gray-700 placeholder--600 border rounded-lg focus:shadow-outline" type="text" name="type" value={this.state.type} onChange={e => this.handleChangeType(e)} />
+        <div>
+          <label className="text-sm">Grape:</label>
+          <input className="w-full h-8 px-2 text-sm text-gray-700 placeholder--600 border rounded-lg focus:shadow-outline" type="text" name="grape" value={this.state.grape} onChange={ e => this.handleChangeGrape(e)} />
+        </div>
+        <div>
+          <label className="text-sm" >Year:</label>
+          <input className="w-full h-8 px-2 text-sm text-gray-700 placeholder--600 border rounded-lg focus:shadow-outline" type="text" name="year" value={this.state.year} onChange={ e => this.handleChangeYear(e)} />
+        </div>
+          <label className="text-sm">Country:</label>
+          <input className="w-full h-8 px-2 text-sm text-gray-700 placeholder--600 border rounded-lg focus:shadow-outline" type="text" name="country" value={this.state.country} onChange={ e => this.handleChangeCountry(e)} />
+        <div>
+          <label className="text-sm">Price:</label>
+          <input className="w-full h-8 px-2 text-sm text-gray-700 placeholder--600 border rounded-lg focus:shadow-outline" type="text" name="price" value={this.state.price} onChange={ e => this.handleChangePrice(e)} />
+        </div>
+        <div>
+          <label className="text-sm">Review:</label>
+          <input className="w-full h-8 px-2 text-sm text-gray-700 placeholder--600 border rounded-lg focus:shadow-outline" type="text" name="review" value={this.state.review} onChange={ e => this.handleChangeReview(e)} />
+        </div>
+        <div>
+          <label className="text-sm">Images:</label>
+          <input className="bg-transparent w-full h-8 px-2 text-sm text-gray-700 placeholder--600 border rounded-lg focus:shadow-outline" type="text" name="images" value={this.state.images} onChange={ e => this.handleChangeImages(e)} />
+        </div>
+         <button onClick={this.handleFormSubmit}>Edit Wine</button>
         </form>
+        <br></br>
+        <Link to='/wine'><p className="text-center">Back to Wine list!</p></Link>
       </div>
+      
+    </div>
     )
   }
 }

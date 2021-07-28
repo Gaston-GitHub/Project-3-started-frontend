@@ -7,6 +7,11 @@ module.exports = {
       "sans": ['SummerCalling', 'sans-serif']
          
     },
+    theme: {
+      screen: {
+        md: '768px'
+      }
+    },
     backgroundColor: theme => ({
       ...theme('colors'),
       'bgPages': '#ede9c6'

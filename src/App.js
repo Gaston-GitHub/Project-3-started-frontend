@@ -12,6 +12,7 @@ import { withAuth } from './providers/AuthProvider';
 import WineDetails from './components/wine/WineDetails';
 import WineList from './components/wine/WineList';
 import AddWine from './components/wine/AddWine';
+import EditWine from './components/wine/EditWine';
 
 
 
@@ -29,8 +30,9 @@ class App extends Component {
 					<AnonRoute path="/login" component={Login} />
 					<PrivateRoute path="/private" component={Private} />
 					<PrivateRoute exact path="/wine" component={WineList} />
-					<PrivateRoute exact path="/wine" component={AddWine} /> 
-					<PrivateRoute exact path="/wine/:id" component={WineDetails} />
+					<PrivateRoute exact path="/wine/create" component={AddWine} /> 
+					<PrivateRoute exact path="/wine/details/:id" component={WineDetails} />
+					<PrivateRoute exacth path="/wine/edit/:id" component={EditWine} />
 				</Switch>
 				<Footer />
 			</div>
