@@ -5,7 +5,7 @@ class Private extends Component {
 
 	render() {
 		return (
-			<div className="md:flex justify-center py-4 bg-bgPages">
+			<div className="min-h-screen flex flex-col justify-center md:py-12 bg-bgPages sm:bg-fixed bg-auto">
 					<div className="md:flex">
 						<div className="">
 							<Link to="/wine/create"><img className="object-contain h-24 w-full bg-bgPages"  src="/img/imageonline-co-transparentimage.png"></img></Link>
@@ -17,15 +17,11 @@ class Private extends Component {
 							<p className="text-center py-2 text-xs">List your wines</p>
 						</div>
 						<br></br>
-						<div>
+						{/* <div>
 							<Link to="/wine/:id"><img className="object-contain md:object-scale-down h-24 w-full" src="/img/imageonline-co-transparentimage (4).png"></img></Link>
 							<p className="text-center py-4 text-xs">If it not taste go od, delete it!</p>
-						</div>
+						</div> */}
 						<br></br>
-							<div>
-								<Link to="/wine/edit/:id"><img className="object-contain md:object-scale-down h-16 w-full" src="/img/imageonline-co-transparentimage (11).png"></img></Link>
-								<p className="text-center py-4 text-xs">Found a bet ter wine? change it!</p>
-							</div>
 					</div>
 			</div>
 			

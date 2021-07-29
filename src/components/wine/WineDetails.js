@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-// import EditWine from './EditWine';
+// import { Link } from 'react-router-dom';
+import EditWine from './EditWine'
  
 class WineDetails extends Component {
   constructor(props) {
@@ -29,6 +29,14 @@ class WineDetails extends Component {
       })
   }
 
+  renderEditForm = () => {
+    if(!this.state.name) {
+      this.getSingleWine();
+    } else {
+      return <EditWine wine={this.state} getSingleWine={this.getSingleWine} {...this.props} />
+    }
+  }
+
   deleteWine = () => {
     const { params } = this.props.match;
     axios.delete(`http://localhost:5000/wine/${params.id}`, { withCredentials: true })
@@ -42,7 +50,9 @@ class WineDetails extends Component {
  
   render(){
     return(
-      <div className="min-h-screen flex flex-col justify-center md:py-12 bg-bgPages md:bg-fixed bg-auto">
+      <div className="min-h-screen flex flex-col justify-center sm:py-12 bg-bgPages sm:bg-fixed bg-auto">
+        <p className=' py-4 text-center'>Your wine detail!</p>
+        <br></br>
         <h1>Name:{this.state.name}</h1>
         <p>Type:{this.state.type}</p>
         <p>Grape:{this.state.grape}</p>
@@ -52,13 +62,9 @@ class WineDetails extends Component {
         <p>Review:{this.state.review}</p>
         <p>Image:{this.state.images}</p> 
         <br></br>
-        <button onClick={() => this.deleteWine()}>Delete Wine</button>
+        <button onClick={() => this.deleteWine()}>Delete</button>
         <br></br>
-        <br></br>
-        <Link to='/wine/edit/:id'>Edit your wine!</Link>
-        <br></br>
-        <br></br>
-        <Link to='/wine'>Back to Wines</Link>
+        <div>{this.renderEditForm()}</div>
       </div>
     )
   }

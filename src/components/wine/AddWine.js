@@ -51,7 +51,7 @@ class AddWine extends Component {
 
   render(){
     return(
-      <div className="min-h-screen py-6 flex flex-col items-center justify-center sm:py-12 bg-bgPages md:bg-fixed">
+      <div className="min-h-screen py-6 flex flex-col items-center justify-center sm:py-12 bg-bgPages sm:bg-fixed bg-auto">
         <form onSubmit={this.handleFormSubmit}>
           <div className="">
             <label className="text-sm">Name:</label>

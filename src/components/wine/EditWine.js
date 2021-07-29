@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom'
 
-
-
 class EditWine extends Component {
   constructor(props) {
     super(props);
@@ -37,7 +35,7 @@ class EditWine extends Component {
     { name, type, grape, year, country, price, review, images },
     { withCredentials: true })
     .then( () => {
-        this.props.getWine();
+        this.props.getSingleWine();
         // after submitting the form, redirect to '/wines'
         this.props.history.push('/wine');    
     })
@@ -95,7 +93,8 @@ class EditWine extends Component {
   render(){
     return (
     <div>
-       <div className="min-h-screen py-6 flex flex-col justify-center sm:py-12 bg-bgPages md:bg-fixed"> 
+      <p className=" py-4 text-center">Edit your wine!</p>
+       <div className="min-h-screen flex flex-col justify-center sm:py-12 bg-bgPages sm:bg-fixed"> 
         <form onSubmit={this.handleFormSubmit}>
         <div className="">
           <label className="text-sm">Name:</label>
@@ -125,7 +124,7 @@ class EditWine extends Component {
           <label className="text-sm">Images:</label>
           <input className="bg-transparent w-full h-8 px-2 text-sm text-gray-700 placeholder--600 border rounded-lg focus:shadow-outline" type="text" name="images" value={this.state.images} onChange={ e => this.handleChangeImages(e)} />
         </div>
-         <button onClick={this.handleFormSubmit}>Edit Wine</button>
+         <button onClick={this.handleFormSubmit}>Submit</button>
         </form>
         <br></br>
         <Link to='/wine'><p className="text-center">Back to Wine list!</p></Link>
