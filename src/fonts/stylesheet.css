@@ -1,8 +1,7 @@
  @font-face {
     font-family: 'Summer Calling';
     src: local('Summer Calling'), local('SummerCalling'),
-        url('SummerCalling.woff2') format('woff2'),
-        url('SummerCalling.woff') format('woff');
+        url('SummerCalling.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;

@@ -26,35 +26,34 @@ class Signup extends Component {
     const { username, password } = this.state;
     return (
 
-<div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12 bg-sign-up md:bg-scroll md:bg-contain bg-auto">
-	<div className="relative py-3 sm:max-w-xl sm:mx-auto">
-		<div
-			className="absolute inset-0 bg-gradient-to-r from-red-300 to-red-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
+<div className="min-h-screen bg-gray-100 justify-center bg-sign-up bg-cover bg-no-repeat">
+	<div className="relative py-6 sm:max-w-lg sm:mx-auto">
+		
 		</div>
-		<div className="relative px-4 py-10 bg-transparent shadow-lg sm:rounded-3xl sm:p-20">
+		<div className="relative px-4">
 			<div className="max-w-md mx-auto">
 				<div>
-					<h1 className="text-2xl text-gray-700  font-semibold">Sign Up</h1>
+					<h1 className="text-2xl text-black font-semibold">Sign Up</h1>
 				</div>
-				<div className="divide-y divide-gray-200">
-					<div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+				
+					<div className="py-8 leading-10 space-y-6">
 						<div className="relative">
-							<input autoComplete="off" id="user name" name="username" value={username} type="text" onChange={this.handleChange} className="placeholder-transparent h-10 w-full border-b-2 focus:outline-none text-gray-700" placeholder="user name" />
-							<label htmlFor="username" className="absolute left-0 -top-3.5 text-sm peer-placeholder-transparent:text-base peer-placeholder-transparent:text-gray-440 peer-placeholder-transparent:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm text-gray-700  ">User Name!</label>
+              <label htmlFor="username" className="left-0 peer-focus:text-gray-600 text-black">User Name!</label>
+							<input autoComplete="off" id="user name" name="username" value={username} type="text" onChange={this.handleChange} className=" text-sm py-4 h-8 w-full border-b-2 focus:outline-none text-gray-700" placeholder="user name" />	
 						</div>
 						<div className="relative">
-							<input autoComplete="off" id="password" name="password" value={password} type="password" onChange={this.handleChange} className="placeholder-transparent h-10 w-full border-b-2 focus:outline-none" placeholder="password" />
-							<label htmlFor="password" className="absolute left-0 -top-3.5 text-sm peer-placeholder-transparent:text-base peer-placeholder-transparent:text-gray-440 peer-placeholder-transparent:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm text-gray-700">Pas sword!</label>
+              <label htmlFor="password" className="left-0 peer-focus:text-gray-600 text-black">Pas sword!</label>	
+							<input autoComplete="off" id="password" name="password" value={password} type="password" onChange={this.handleChange} className="text-sm py-4 h-8 w-full border-b-2 focus:outline-none" placeholder="password" />
+              
 						</div>
 						<div className="relative">
 							<button onClick={this.handleFormSubmit} className="bg-red-900 text-white rounded-md px-2 py-1 font-mono">Submit</button>
 						</div>
-            <p className="text-red">have an account? <br></br> Click in Login</p>
-            {/* <Link to={"/login"}>Login</Link> */}
+            <p className="text-white">Have an account? <br></br> Click in Login...</p>
 					</div>
-				</div>
+				
 			</div>
-		</div>
+		
 	</div>
 </div>
 

@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 class Footer extends Component {
   render() {
     return(
-      <div className="h-20 w-full bg-yellow-100 bg-opacity-100">
+      <div className="h-20 w-full bg-bg-navbar-footer bg-cover bg-no-repeat">
         
-         <Link to='/private'><p className="text-center">Home</p></Link>
+         <Link to='/private'><p className="text-white items-center text-center py-5">Home</p></Link>
         
       </div>
     )

@@ -50,7 +50,7 @@ class WineDetails extends Component {
  
   render(){
     return(
-      <div className="min-h-screen flex flex-col justify-center sm:py-12 bg-bgPages sm:bg-fixed bg-auto">
+      <div className="max-h-full flex flex-col justify-center bg-bg-private bg-cover bg-no-repeat sm:bg-fixed">
         <p className=' py-4 text-center'>Your wine detail!</p>
         <br></br>
         <h1>Name:{this.state.name}</h1>

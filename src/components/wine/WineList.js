@@ -35,7 +35,7 @@ class WineList extends Component {
 
   render() {
     return (
-      <div className="min-h-screen py-6 flex flex-col justify-center text-center sm:py-12 bg-bgPages sm:bg-fixed">
+      <div className="min-h-screen py-6 flex flex-col justify-center text-center sm:py-12 bg-bg-private bg-cover bg-no-repeat sm:bg-fixed">
         <p>This is your wine list!</p>
         <br></br>
         {this.state.status === 'loading' && <p>loading...</p>}
