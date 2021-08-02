@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import { Switch } from 'react-router-dom';
-
-import Navbar from './components/Navbar';
-import Footer from './components/Footer.js'
 import PrivateRoute from './components/PrivateRoute';
 import AnonRoute from './components/AnonRoute';
 import Private from './pages/Private';
@@ -24,7 +21,6 @@ class App extends Component {
 		}
 		return (
 			<div>
-				<Navbar />
 				<Switch>
 					<AnonRoute path="/signup" component={Signup} />
 					<AnonRoute path="/login" component={Login} />
@@ -34,7 +30,6 @@ class App extends Component {
 					<PrivateRoute exact path="/wine/details/:id" component={WineDetails} />
 					<PrivateRoute exacth path="/wine/edit/:id" component={EditWine} />
 				</Switch>
-				<Footer />
 			</div>
 			
 		);

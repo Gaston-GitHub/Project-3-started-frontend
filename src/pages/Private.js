@@ -1,28 +1,37 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { withAuth } from '../providers/AuthProvider';
+import logo from '../images/imageonline-co-transparentimage (10).png';
+
 
 class Private extends Component {
-
 	render() {
+			const { user, isLoggedIn, logout } = this.props;
 		return (
-			<div className="min-h-screen flex flex-col justify-center bg-bg-private bg-cover bg-no-repeat sm:bg-fixed">
-					<div className="md:flex">
-						<div className="">
-							<Link to="/wine/create"><img className="object-contain h-24 w-full" src="/img/imageonline-co-transparentimage.png"></img></Link>
-							<p className="text-center py-2 text-black">Add your favorite wine</p>
-						</div>
-						<br></br>
-						<div className="">
-							<Link to="/wine"><img className="object-contain h-24 w-full" src="/img/imageonline-co-transparentimage (3).png"></img></Link>
-							<p className="text-center py-2 text-red">List your wines</p>
-						</div>
-						<br></br>
-						<br></br>
+
+<div className="p-5 min-h-screen justify-center bg-black"> 
+	<button className="bg-gray-50 text-black px-2 py-1 text-sm" onClick={logout}>Logout</button>     
+		<div className="relative py-6 sm:max-w-lg sm:mx-auto">
+			<div className="relative px-4">
+				<div>
+					{ isLoggedIn ? (
+						<><p className="text-white text-2xl text-center">Welcome: {user.username}</p></>
+					): (
+					<>
+					</>
+					)}
+					<div className="py-20">
+					<Link to="/wine/create"><p className="text-white text-xl text-center">Save your wine</p></Link>
+					<br></br>
+					<Link to="/wine"><p className="text-white text-center text-xl">Wine list</p></Link> 
+					<img className="py-20" src={logo} alt=""></img>
 					</div>
-			</div>
-			
+			 </div>		
+		</div>
+	</div>
+</div>		
 		);
 	}
 }
 
-export default Private;
+export default withAuth(Private);

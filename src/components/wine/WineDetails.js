@@ -50,20 +50,17 @@ class WineDetails extends Component {
  
   render(){
     return(
-      <div className="max-h-full flex flex-col justify-center bg-bg-private bg-cover bg-no-repeat sm:bg-fixed">
-        <p className=' py-4 text-center'>Your wine detail!</p>
+      <div className="px-10 max-h-full flex flex-col justify-center text-white bg-black">
+        <p className='py-2 text-center text-white'>Wine Information</p>
         <br></br>
-        <h1>Name:{this.state.name}</h1>
+        <h1 className="text-semibold">Name:{this.state.name}</h1>
         <p>Type:{this.state.type}</p>
         <p>Grape:{this.state.grape}</p>
         <p>Year:{this.state.year}</p>
-        <p>COuntry:{this.state.country}</p>
+        <p>Country:{this.state.country}</p>
         <p>Price:{this.state.price}</p>
         <p>Review:{this.state.review}</p>
-        <p>Image:{this.state.images}</p> 
-        <br></br>
-        <button onClick={() => this.deleteWine()}>Delete</button>
-        <br></br>
+        <button onClick={() => this.deleteWine()}>Delete ☑️</button>
         <div>{this.renderEditForm()}</div>
       </div>
     )

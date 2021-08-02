@@ -1,14 +1,6 @@
-@import url('./fonts/stylesheet.css');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Archivo:wght@300&family=Baloo+Chettan+2:wght@500&family=Fjalla+One&family=Gothic+A1:wght@100&family=Neucha&family=Oswald&family=Roboto:wght@500&family=Shadows+Into+Light&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* File: font.css */
-@font-face {
-    font-family: 'SummerCalling';
-    font-weight: normal;
-    font-style: normal;
-    src: url('./fonts/SummerCalling.woff') format('woff'),
-         url('./fonts/SummerCalling.woff2') format('woff2');
-}

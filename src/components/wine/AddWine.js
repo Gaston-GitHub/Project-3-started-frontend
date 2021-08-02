@@ -51,47 +51,45 @@ class AddWine extends Component {
 
   render(){
     return(
-      <div className="min-h-screen py-6 flex flex-col items-center justify-center sm:py-12 bg-bg-private bg-cover bg-no-repeat sm:bg-fixed ">
+      <div className="p-10 min-h-screen py-6 flex flex-col items-center justify-center bg-black ">
         <form onSubmit={this.handleFormSubmit}>
-          <div className="">
-            <label className="text-sm">Name:</label>
-            <input className="w-full h-8 px-2 text-sm text-gray-700 placeholder--600 border rounded-lg focus:shadow-outline" name="name" value={this.state.name} onChange={ e => this.handleChange(e)}/>
-          </div>
-          <div>
-            <label className="text-sm">Type:</label>
-            <input className="w-full h-8 px-2 text-sm text-gray-700 placeholder-gray-600 border rounded-lg focus:shadow-outline" type="text" name="type" value={this.state.type} onChange={ e => this.handleChange(e)} />
-          </div>
-          <div>
-            <label className="text-sm">Grape:</label>
-            <input className="w-full h-8 px-2 text-sm text-gray-700 placeholder-gray-600 border rounded-lg focus:shadow-outline" type='text' name="grape" value={this.state.grape} onChange={ e => this.handleChange(e)} />
-          </div>
-          <div>
-            <label className="text-sm">Year:</label>
-            <input className="w-full h-8 px-2 text-sm text-gray-700 placeholder-gray-600 border rounded-lg focus:shadow-outline" type="text" name="year" value={this.state.year} onChange={ e => this.handleChange(e)} />
-          </div>
-          <div>
-           <label className="text-sm">Country:</label>
-           <input className="w-full h-8 px-2 text-sm text-gray-700 placeholder-gray-600 border rounded-lg focus:shadow-outline" type="text" name="country" value={this.state.country} onChange={ e => this.handleChange(e)} />
-          </div>
-          <div>
-            <label className="text-sm">Price:</label>
-            <input className="w-full h-8 px-2 text-sm text-gray-700 placeholder-gray-600 border rounded-lg focus:shadow-outline" type="text" name="price" value={this.state.price} onChange={ e => this.handleChange(e)} />
-          </div>
-          <div>
-            <label className="text-sm">Review</label>
-            <input className="w-full h-8 px-2 text-sm text-gray-700 placeholder-gray-600 border rounded-lg focus:shadow-outline" name="review" value={this.state.review} onChange={ e => this.handleChange(e)} />
-          </div>
-          <div>
-            <label className="text-sm">Image:</label>
-            <input className="bg-transparent" type="text" name="image" value={this.state.image} onChange={ e => this.handleChange(e)} />
-          </div>
+            <h1 className="text-white text-center">Save your favorite wine</h1>
+          
+            <label className="text-sm text-white">Name:</label>
+            <input className="w-full h-6 text-sm text-gray-700 border-b-2 focus:outline-none" name="name" value={this.state.name} onChange={ e => this.handleChange(e)}/>
+          
+    
+            <label className="text-sm text-white">Type:</label>
+            <input className="w-full h-6 py-2 text-sm text-gray-700 border-b-2 focus:outline-none" type="text" name="type" value={this.state.type} onChange={ e => this.handleChange(e)} />
+          
+          
+            <label className="text-sm text-white">Grape:</label>
+            <input className="w-full h-6 py-2 text-sm text-gray-700 border-b-2 focus:outline-none" type='text' name="grape" value={this.state.grape} onChange={ e => this.handleChange(e)} />
+          
+          
+            <label className="text-sm text-white">Year:</label>
+            <input className="w-full h-6 py-2 text-sm text-gray-700 border-b-2 focus:outline-none" type="text" name="year" value={this.state.year} onChange={ e => this.handleChange(e)} />
+          
+          
+           <label className="text-sm text-white">Country:</label>
+           <input className="w-full h-6 py-2 text-sm text-gray-700 border-b-2 focus:outline-none" type="text" name="country" value={this.state.country} onChange={ e => this.handleChange(e)} />
+          
+          
+            <label className="text-sm text-white">Price:</label>
+            <input className="w-full h-6 py-2 text-sm text-gray-700 border-b-2 focus:outline-none" type="text" name="price" value={this.state.price} onChange={ e => this.handleChange(e)} />
+          
+          
+            <label className="text-sm text-white">Review:</label>
+            <input className="w-full h-6 py-2 text-sm text-gray-700 border-b-2 focus:outline-none" name="review" value={this.state.review} onChange={ e => this.handleChange(e)} />
+          
+          <br></br>
           <br></br>
           <div className=" flex items-center">
-          <button onClick={this.handleFormSubmit}>Save!</button>
+          <button onClick={this.handleFormSubmit} className="bg-gray-50 text-black px-2 py-1 text-sm">Save it</button>
           </div>
         </form>
         <br></br>
-        <Link to="/wine"><p className="text-center">Go to wine list!</p></Link>
+        <Link to="/wine"><p className="text-center text-white">Go to wine list ↩️</p></Link>
       </div>
       
 

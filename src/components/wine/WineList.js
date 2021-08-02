@@ -1,10 +1,7 @@
-// components/wine/WinetList.js
 
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-
-// import AddWine from '../wine/AddWine';
 
 class WineList extends Component {
   constructor(props) {
@@ -35,8 +32,8 @@ class WineList extends Component {
 
   render() {
     return (
-      <div className="min-h-screen py-6 flex flex-col justify-center text-center sm:py-12 bg-bg-private bg-cover bg-no-repeat sm:bg-fixed">
-        <p>This is your wine list!</p>
+      <div className="min-h-screen py-6 flex flex-col justify-center text-center text-white sm:py-6 bg-black">
+        <p className="text-xl">This is your wine list</p>
         <br></br>
         {this.state.status === 'loading' && <p>loading...</p>}
         {this.state.status === 'loaded' &&
@@ -49,6 +46,8 @@ class WineList extends Component {
               </div>
             )})
           }
+          <Link to="/wine/create"><p className="text-white text-center py-10">Save a new wine ☑️ </p></Link>
+          <Link to="/private"><p className="text-white text-center">Go back ↩️</p></Link>
       </div>
     )
   }
