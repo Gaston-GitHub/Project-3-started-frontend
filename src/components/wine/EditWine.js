@@ -31,7 +31,7 @@ class EditWine extends Component {
 
      event.preventDefault();
 
-    axios.put(`http://localhost:5000/wine/${this.props.wine._id}`,
+    axios.put(`https://wine-saver.herokuapp.com/wine/${this.props.wine._id}`,
     { name, type, grape, year, country, price, review, images },
     { withCredentials: true })
     .then( () => {

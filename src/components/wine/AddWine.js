@@ -27,7 +27,7 @@ class AddWine extends Component {
     const images = this.state.images;
 
 
-    axios.post("http://localhost:5000/wine",
+    axios.post("https://wine-saver.herokuapp.com/wine",
     { name, type, grape, year, country, price, review, images },
     { withCredentials:true })
     .then( () => {

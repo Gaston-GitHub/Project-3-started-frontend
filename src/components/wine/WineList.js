@@ -13,7 +13,7 @@ class WineList extends Component {
   }
     
   getAllWines = () =>{
-    axios.get(`http://localhost:5000/wine`, { withCredentials: true })
+    axios.get(`https://wine-saver.herokuapp.com/wine`, { withCredentials: true })
     .then(responseFromApi => {
       console.log('API data', responseFromApi.data)
       this.setState({

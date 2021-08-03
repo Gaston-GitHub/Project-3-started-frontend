@@ -38,7 +38,7 @@ class WineDetails extends Component {
 
   deleteWine = () => {
     const { params } = this.props.match;
-    axios.delete(`http://localhost:5000/wine/${params.id}`, { withCredentials: true })
+    axios.delete(`https://wine-saver.herokuapp.com/wine/${params.id}`, { withCredentials: true })
     .then( () =>{
         this.props.history.push('/wine'); 
     })
