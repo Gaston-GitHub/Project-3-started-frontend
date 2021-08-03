@@ -11,10 +11,8 @@ class AddWine extends Component {
     country: "",
     price: "",
     review: "",
-    image: "",
      }
 
-   
   handleFormSubmit = (event) => {
     event.preventDefault();
     const name = this.state.name;
@@ -24,11 +22,9 @@ class AddWine extends Component {
     const country = this.state.country;
     const price = this.state.price;
     const review = this.state.review;
-    const images = this.state.images;
-
-
+    
     axios.post("https://wine-saver.herokuapp.com/wine",
-    { name, type, grape, year, country, price, review, images },
+    { name, type, grape, year, country, price, review },
     { withCredentials:true })
     .then( () => {
         this.setState({
@@ -39,7 +35,7 @@ class AddWine extends Component {
         country:"", 
         price: "", 
         review: "", 
-        images:""});
+        })
     })
     .catch( error => console.log(error) )
   }
