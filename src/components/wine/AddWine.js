@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 class AddWine extends Component {
   state = { 
@@ -37,6 +37,7 @@ class AddWine extends Component {
         review: "", 
         })
     })
+    .then(() => {this.props.history.push('.wine')})
     .catch( error => console.log(error) )
   }
 
@@ -87,9 +88,6 @@ class AddWine extends Component {
         <br></br>
         <Link to="/wine"><p className="text-center text-white">Go to wine list ↩️</p></Link>
       </div>
-      
-
-
     )
   }
 }
