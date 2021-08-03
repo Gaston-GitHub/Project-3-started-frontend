@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import { Link } from 'react-router-dom';
 import EditWine from './EditWine'
  
 class WineDetails extends Component {
@@ -51,8 +50,7 @@ class WineDetails extends Component {
   render(){
     return(
       <div className="px-10 max-h-full flex flex-col justify-center text-white bg-black">
-        <p className='py-2 text-center text-white'>Wine Information</p>
-        <br></br>
+        <p className='text-center text-white'>Wine Information</p>
         <h1 className="text-semibold">Name:{this.state.name}</h1>
         <p>Type:{this.state.type}</p>
         <p>Grape:{this.state.grape}</p>

@@ -83,12 +83,6 @@ class EditWine extends Component {
     })
   }
 
-  handleChangeImages = (event) => {
-    this.setState({
-      images:event.target.value
-    })
-  }
-
   render(){
     return (
 
@@ -98,25 +92,29 @@ class EditWine extends Component {
         <form onSubmit={this.handleFormSubmit}>
         <div className="">
           <label className="text-sm">Name:</label>
-          <input className="w-full h-6 text-sm text-gray-700 border-b-2 focus:outline-none" type="text" name="name" value={this.state.name} onChange={e => this.handleChangeName(e)}/>
+          <input className="w-full h-5 text-sm text-gray-700 border-b-2 focus:outline-none" type="text" name="name" value={this.state.name} onChange={e => this.handleChangeName(e)}/>
         </div>
           <label className="text-sm">Type:</label>
-          <input className="w-full h-6 text-sm text-gray-700 border-b-2 focus:outline-none" type="text" name="type" value={this.state.type} onChange={e => this.handleChangeType(e)} />
+          <input className="w-full h-5 text-sm text-gray-700 border-b-2 focus:outline-none" type="text" name="type" value={this.state.type} onChange={e => this.handleChangeType(e)} />
         <div>
           <label className="text-sm">Grape:</label>
-          <input className="w-full h-6 text-sm text-gray-700 border-b-2 focus:outline-none" type="text" name="grape" value={this.state.grape} onChange={ e => this.handleChangeGrape(e)} />
+          <input className="w-full h-5 text-sm text-gray-700 border-b-2 focus:outline-none" type="text" name="grape" value={this.state.grape} onChange={ e => this.handleChangeGrape(e)} />
         </div>
         <div>
           <label className="text-sm" >Year:</label>
-          <input className="w-full h-6 text-sm text-gray-700 border-b-2 focus:outline-none" type="text" name="year" value={this.state.year} onChange={ e => this.handleChangeYear(e)} />
+          <input className="w-full h-5 text-sm text-gray-700 border-b-2 focus:outline-none" type="text" name="year" value={this.state.year} onChange={ e => this.handleChangeYear(e)} />
+        </div>
+        <div>
+          <label className="text-sm">Country:</label>
+          <input className="w-full h-5 text-sm text-gray-700 border-b-2 focus:outline-none" type="text" name="country" value={this.state.country} onChange={ e => this.handleChangeCountry(e)}></input>
         </div>
         <div>
           <label className="text-sm">Price:</label>
-          <input className="w-full h-6 focus:text-sm text-gray-700 border-b-2 focus:outline-none" type="text" name="price" value={this.state.price} onChange={ e => this.handleChangePrice(e)} />
+          <input className="w-full h-5 focus:text-sm text-gray-700 border-b-2 focus:outline-none" type="text" name="price" value={this.state.price} onChange={ e => this.handleChangePrice(e)} />
         </div>
         <div>
           <label className="text-sm">Review:</label>
-          <input className="w-full h-6 text-sm text-gray-700 border-b-2 focus:outline-none" type="text" name="review" value={this.state.review} onChange={ e => this.handleChangeReview(e)} />
+          <input className="w-full h-5 text-sm text-gray-700 border-b-2 focus:outline-none" type="text" name="review" value={this.state.review} onChange={ e => this.handleChangeReview(e)} />
         </div>
         <br></br>
          <button onClick={this.handleFormSubmit} className="bg-gray-50 text-black px-2 py-1 text-sm">Submit</button>
